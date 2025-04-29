@@ -26,6 +26,7 @@ cc_library_shared {
         "-DACD_SM_FILEPATH=\"/vendor/etc/models/acd/\"",
         "-DADSP_SLEEP_MONITOR",
         "-DCONFIG_GSL",
+        "-DPAL_MEMLOG_UNSUPPORTED",
         "-DPAL_SP_TEMP_PATH=\"/data/vendor/audio/audio.cal\"",
         "-DSOC_PERIPHERAL_PROT",
         "-Wall",
@@ -99,7 +100,6 @@ cc_library_shared {
         "utils/src/ACDPlatformInfo.cpp",
         "utils/src/ASRPlatformInfo.cpp",
         "utils/src/AudioHapticsInterface.cpp",
-        "utils/src/MemLogBuilder.cpp",
         "utils/src/MetadataParser.cpp",
         "utils/src/PalRingBuffer.cpp",
         "utils/src/PerfLock.cpp",
@@ -118,7 +118,6 @@ cc_library_shared {
     header_libs: [
         "libacdb_headers",
         "libagm_headers",
-        "libarmemlog_headers",
         "libarosal_headers",
         "libarpal_headers",
         "libarvui_intf_headers",
@@ -135,7 +134,6 @@ cc_library_shared {
     shared_libs: [
         "libagmclient",
         "libar-gsl",
-        "libarmemlog",
         "libaudioroute",
         "libcutils",
         "libexpat",
